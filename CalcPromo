@@ -1,0 +1,64 @@
+/*
+caUsingDecisions  (Chapter 5)
+11/03/2019
+Haeun Oh
+Using if .... then statements and stuff
+ */
+package causingdecisions;
+
+import java.util.Scanner;
+
+public class CaUsingDecisions {
+
+   static double dblSales, dblDiscounts, dblAmount;
+   
+    public static void main(String[] args) {
+       ReadSales();
+       DecideCalculation();
+       PrintAmount();
+    }
+       
+    public static void ReadSales() {
+         Scanner sc = new Scanner (System.in);
+         System.out.print("Please enter the sales amount: ");
+         dblSales = sc.nextDouble();
+    }
+    public static void DecideCalculation() {
+         dblDiscounts = 20;
+         if (dblSales > 5000)
+         {
+             dblAmount= dblSales - (dblSales *(dblDiscounts /100));
+         }
+         else
+         {
+             dblAmount = dblSales;
+    }
+    }
+    public static void PrintAmount(){
+        System.out.println("The amount that needs to be paid is " + dblAmount);
+    }
+}
+    
+    
+       
+
+
+/*int intNumber;
+       intNumber = 100; //67, will result in the following if then statement being false
+       if(intNumber == 100){                                 //== means equality = means assignment statement
+            System.out.println("Numbers are equal");
+            System.out.println("Numbers are equal again");
+       }
+       intNumber = 67; 
+       if(intNumber != 100)                               //== means equality = means assignment statement
+            System.out.println("Numbers are equal");
+       System.out.println("Some other line I thought was going to print out if the above true section ran");
+       if (intNumber == 100)
+       {
+           System.out.println("100 is = "); //technically not going to run because inNumber = 67
+       }
+       else
+       {
+           System.out.println("we know 67 is not equal to 100");  //this is the false section
+       }
+*/
